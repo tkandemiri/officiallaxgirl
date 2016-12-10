@@ -1,0 +1,74 @@
+<!-- Home page for officiallaxgirl.com - a website for my online persona -->
+
+<html>
+
+<!-- Website title, stylesheet, and favicon -->
+<head>
+
+<title> Official Lax Girl </title>
+<link rel="stylesheet" type="text/css" href="myStyle.css">
+<link rel="icon" href="https://pbs.twimg.com/profile_images/468583296226430977/pNZuVudN_400x400.png">
+
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="http://officiallaxgirl.com/">Home</a>
+  <a href="about">About</a>
+  <a href="https://twitter.com/officiallaxgirl">Twitter</a>
+  <a href="https://instagram.com/officiallaxgirl">Instagram</a>
+  <a href="mailto:tari@officiallaxgirl.com">Email</a>
+</div>
+
+<div id="main">
+  <h2></h2>
+  <p></p>
+  <span style="font-size:40px;cursor:pointer" onclick="openNav()">&#9776; Official Lax Girl</span>
+</div>
+
+<!-- Script for opening sidebar -->
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script
+
+
+<!-- Photo slideshow - Photos via Patrick McEwen -->
+<center>
+<section>
+  <img class="mySlides" src="http://officiallaxgirl.com/PRM_0027.JPG" style="width:100%">
+  <img class="mySlides" src="http://officiallaxgirl.com/PRM_0127.JPG" style="width:100%">
+  <img class="mySlides" src="http://officiallaxgirl.com/PRM_0185.JPG" style="width:100%">
+</section>
+</center>
+
+<!-- Function for slideshow -->
+<script>
+var myIndex = 0;
+slide();
+
+function slide() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(slide, 4000);
+}
+</script>
+
+</body>
+</html>
